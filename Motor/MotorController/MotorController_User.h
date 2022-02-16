@@ -90,6 +90,7 @@ static inline uint16_t MotorController_User_GetHeatMosfetsBot_DegCScalar(MotorCo
 static inline uint16_t MotorController_User_GetHeatPcbLimit_DegCScalar(MotorController_T * p_mc, uint16_t scalar) 	{return Thermistor_GetHeatLimit_DegCScalar(&p_mc->ThermistorPcb);}
 
 
+
 /*
  * Motor Wrapper
  */
@@ -111,6 +112,10 @@ static inline uint16_t MotorController_User_GetMotorHeat_DegCScalar(MotorControl
 
 static inline void MotorController_User_CalibrateHall(MotorController_T * p_mc, uint8_t motorIndex) {Motor_User_ActivateCalibrationHall(MotorController_GetPtrMotor(p_mc, motorIndex));}
 
+
+static inline uint16_t MotorController_User_GetIBus_Frac16(MotorController_T * p_mc, uint8_t motorIndex)		{return Motor_User_GetIBus_Frac16(MotorController_GetPtrMotor(p_mc, motorIndex));}
+
+static inline uint16_t MotorController_User_GetIBusLimit_Frac16(MotorController_T * p_mc, uint8_t motorIndex)		{return Motor_User_GetIBusLimit_Frac16(MotorController_GetPtrMotor(p_mc, motorIndex));}
 /*
  * Nvm Saved Variables
  */

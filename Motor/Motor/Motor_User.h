@@ -44,6 +44,9 @@
 static inline uint32_t Motor_User_GetVPos_MilliV(Motor_T * p_motor)	{return Linear_Voltage_CalcMilliV(&p_motor->CONFIG.UNIT_V_POS, p_motor->AnalogResults.VPos_ADCU);}
 static inline uint16_t Motor_User_GetSpeed_RPM(Motor_T *p_motor) 	{return p_motor->Speed_RPM;}
 
+
+static inline uint16_t Motor_User_GetIBus_Frac16(Motor_T *p_motor) 	{return p_motor->IBus_Frac16;}
+static inline uint16_t Motor_User_GetIBusLimit_Frac16(Motor_T *p_motor) 	{return p_motor->Parameters.IBusLimit_Frac16;}
 // Linear_Voltage_CalcMilliV(&p_motor->CONFIG.UNIT_V_POS, p_motor->AnalogResults.VPos_ADCU);
 // Linear_Voltage_CalcMilliV(&p_motor->CONFIG.UNIT_V_ABC, p_motor->AnalogResults.Va_ADCU);
 
